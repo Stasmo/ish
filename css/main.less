@@ -1,18 +1,25 @@
 @blurSize: 5px;
-@headercolor: #333;
+@headercolor: #000;
 @main-bg-color: #fff;
-@bg-clear: url('http://1x1px.me/FFFFFF-0.8.png');
+@bg-clear: url('../img/bg/FFFFFF-0.8.png');
+
+h1,h2,h3,h4,h5,h6{
+	color: @headercolor;
+}
 
 #header{
 	color: #fff;
+	h1, h2{
+		.strokeme(2px)
+	}
 	h1{
 		font-size: 5em;
-		.strokeme(2px)
 	}
 }
 
 #content > .row{
 	background-image: @bg-clear;
+	padding: 4px;
 }
 
 #bg{
@@ -34,4 +41,10 @@
     @width -@width 0 #000,
     -@width @width 0 #000,
     @width @width 0 #000;  
+}
+
+#location{
+	iframe{
+		margin: 0 auto;
+	}
 }
