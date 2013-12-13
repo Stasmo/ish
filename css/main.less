@@ -1,0 +1,37 @@
+@blurSize: 5px;
+@headercolor: #333;
+@main-bg-color: #fff;
+@bg-clear: url('http://1x1px.me/FFFFFF-0.8.png');
+
+#header{
+	color: #fff;
+	h1{
+		font-size: 5em;
+		.strokeme(2px)
+	}
+}
+
+#content > .row{
+	background-image: @bg-clear;
+}
+
+#bg{
+	-webkit-filter: blur(@blurSize);
+	-moz-filter: blur(@blurSize);
+	-o-filter: blur(@blurSize);
+	-ms-filter: blur(@blurSize);
+	filter: blur(@blurSize);
+	position: fixed;
+	width: 100%;
+	filter: blur(5px) brightness(0.5);
+	z-index: -1;
+}
+
+.strokeme(@width: 1px){
+    color: white;
+    text-shadow:
+    -@width -@width 0 #000,
+    @width -@width 0 #000,
+    -@width @width 0 #000,
+    @width @width 0 #000;  
+}
